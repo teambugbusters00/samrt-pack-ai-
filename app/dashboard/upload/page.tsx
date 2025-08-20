@@ -47,21 +47,100 @@ export default function UploadPage() {
   }, [])
 
   const parseCSV = (text: string): ProductData[] => {
-    const lines = text.split("\n").filter((line) => line.trim())
-    const headers = lines[0].split(",").map((h) => h.trim().toLowerCase())
+    const rows: string[][] = []
+    let current = ""
+    let inQuotes = false
+    let row: string[] = []
 
-    return lines
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i]
+      const nextChar = text[i + 1]
+
+      if (char === '"') {
+        if (inQuotes && nextChar === '"') {
+          current += '"'
+          i++ // Skip next quote
+        } else {
+          inQuotes = !inQuotes
+        }
+      } else if (char === "," && !inQuotes) {
+        row.push(current.trim())
+        current = ""
+      } else if ((char === "\n" || char === "\r") && !inQuotes) {
+        if (current || row.length > 0) {
+          row.push(current.trim())
+          if (row.some((cell) => cell.length > 0)) {
+            rows.push(row)
+          }
+          row = []
+          current = ""
+        }
+      } else if (char !== "\r") {
+        current += char
+      }
+    }
+
+    if (current || row.length > 0) {
+      row.push(current.trim())
+      if (row.some((cell) => cell.length > 0)) {
+        rows.push(row)
+      }
+    }
+
+    if (rows.length < 2) return []
+
+    const headers = rows[0].map((h) => h.trim().toLowerCase())
+
+    return rows
       .slice(1)
-      .map((line) => {
-        const values = line.split(",").map((v) => v.trim())
+      .map((values) => {
+        const product: any = {}
+
+        headers.forEach((header, index) => {
+          const value = values[index]?.trim()
+          if (value) {
+            switch (header) {
+              case "name":
+              case "product name":
+              case "product":
+                product.name = value
+                break
+              case "weight":
+              case "wt":
+                product.weight = Number.parseFloat(value) || 0
+                break
+              case "length":
+              case "l":
+                product.length = Number.parseFloat(value) || 0
+                break
+              case "width":
+              case "w":
+                product.width = Number.parseFloat(value) || 0
+                break
+              case "height":
+              case "h":
+                product.height = Number.parseFloat(value) || 0
+                break
+              case "material":
+              case "packaging_material":
+                product.material = value
+                break
+              case "quantity":
+              case "qty":
+                product.quantity = Number.parseInt(value) || 1
+                break
+            }
+          }
+        })
+
         return {
-          name: values[headers.indexOf("name")] || values[headers.indexOf("product")] || "Unknown Product",
-          weight: Number.parseFloat(values[headers.indexOf("weight")]) || 0,
-          length: Number.parseFloat(values[headers.indexOf("length")]) || 0,
-          width: Number.parseFloat(values[headers.indexOf("width")]) || 0,
-          height: Number.parseFloat(values[headers.indexOf("height")]) || 0,
-          material: values[headers.indexOf("material")] || "Unknown",
-          quantity: Number.parseInt(values[headers.indexOf("quantity")]) || 1,
+          name: product.name || "Unknown Product",
+          weight: product.weight || 0,
+          length: product.length || 0,
+          width: product.width || 0,
+          height: product.height || 0,
+          material: product.material || "Unknown",
+          quantity: product.quantity || 1,
         }
       })
       .filter((item) => item.name !== "Unknown Product")
@@ -175,25 +254,46 @@ export default function UploadPage() {
         })
       }, 300)
 
-      // Simulate AI analysis delay
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      // Process each captured image with AI
+      const allProducts: ProductData[] = []
 
-      // Mock extracted data from images
-      const mockData: ProductData[] = capturedImages.map((_, index) => ({
-        name: `Product ${index + 1} (Camera Detected)`,
-        weight: Math.round((Math.random() * 5 + 0.5) * 100) / 100,
-        length: Math.round((Math.random() * 30 + 10) * 100) / 100,
-        width: Math.round((Math.random() * 25 + 8) * 100) / 100,
-        height: Math.round((Math.random() * 20 + 5) * 100) / 100,
-        material: ["Cardboard", "Plastic", "Metal", "Glass"][Math.floor(Math.random() * 4)],
-        quantity: Math.floor(Math.random() * 5) + 1,
-      }))
+      for (let i = 0; i < capturedImages.length; i++) {
+        // Convert base64 to blob
+        const response = await fetch(capturedImages[i])
+        const blob = await response.blob()
+        const file = new File([blob], `captured-image-${i + 1}.jpg`, { type: "image/jpeg" })
+
+        const formData = new FormData()
+        formData.append("file", file)
+        formData.append("uploadMethod", "camera")
+
+        const apiResponse = await fetch("/api/uploads", {
+          method: "POST",
+          body: formData,
+        })
+
+        const result = await apiResponse.json()
+
+        if (apiResponse.ok && result.products) {
+          // Convert database format to display format
+          const convertedProducts = result.products.map((p: any) => ({
+            name: p.name,
+            weight: p.weight,
+            length: p.dimensions_length,
+            width: p.dimensions_width,
+            height: p.dimensions_height,
+            material: p.material,
+            quantity: p.quantity,
+          }))
+          allProducts.push(...convertedProducts)
+        }
+      }
 
       setUploadProgress(100)
 
       setTimeout(() => {
-        setUploadedData(mockData)
-        setUploadStatus("success")
+        setUploadedData(allProducts)
+        setUploadStatus(allProducts.length > 0 ? "success" : "error")
         setIsUploading(false)
         stopCamera()
         setCapturedImages([])
