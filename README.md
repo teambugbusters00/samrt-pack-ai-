@@ -1,30 +1,74 @@
-# Empty conversation
+// generate-readme.js
+const fs = require("fs");
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+const readmeContent = `
+# 📦 SmartPack AI – SaaS Packaging Optimization Platform
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vijayjangid0909s-projects/v0-empty-conversation)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/ozzOHNgvbfJ)
+### 🔗 Live Demo
+[SmartPack AI – Live on Vercel](https://v0-empty-conversation-bice-xi.vercel.app/)
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## 📖 About
+SmartPack AI is a SaaS web application designed to help SMEs optimize packaging decisions using AI-driven insights.
+It reduces material waste, saves costs, and improves sustainability by suggesting the best box sizes, materials, and estimating CO₂ reduction.
 
-## Deployment
+---
 
-Your project is live at:
+## 🚀 Features
+- 🔐 Authentication (Login/Signup with role-based access)
+- 📊 Dashboard (animated SaaS-style interface)
+- 📂 Upload Data (CSV/Excel import)
+- 🤖 AI Optimization (mock AI engine for box size, material, cost savings, CO₂ reduction)
+- 📈 Results Visualization (tables + charts)
+- 🌍 Sustainability Impact metrics
+- 📑 Reports export (PDF/CSV)
+- ⚙️ Settings (Profile + Subscription plans)
+- 🎨 Dark Futuristic UI (TailwindCSS + Framer Motion)
 
-**[https://vercel.com/vijayjangid0909s-projects/v0-empty-conversation](https://vercel.com/vijayjangid0909s-projects/v0-empty-conversation)**
+---
 
-## Build your app
+## 🛠️ Tech Stack
+Frontend: React (Next.js), TailwindCSS, Framer Motion, Recharts
+Backend: Node.js + Express (Supabase/Firebase optional)
+Database: PostgreSQL / Supabase
+Auth: JWT / Supabase Auth
+Reports: jsPDF / PDFKit
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/projects/ozzOHNgvbfJ](https://v0.app/chat/projects/ozzOHNgvbfJ)**
+## ⚡ Quick Start
 
-## How It Works
+1. Clone the repo
+   \`\`\`bash
+   git clone https://github.com/your-repo/smartpack-ai.git
+   cd smartpack-ai
+   \`\`\`
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+2. Install dependencies
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. Setup environment variables
+   \`\`\`
+   NEXT_PUBLIC_API_URL=http://localhost:5000
+   DATABASE_URL=your_database_url
+   JWT_SECRET=your_secret_key
+   \`\`\`
+
+4. Run development servers
+   - Frontend: \`npm run dev\`
+   - Backend: \`cd server && npm install && npm start\`
+
+---
+
+## 👥 Contributors
+- Raj Kumar Chaudhary
+- Yashoratnam
+- Vijay Ramdev
+- Shreyas Mishra
+`;
+
+fs.writeFileSync("README.txt", readmeContent.trim());
+console.log("✅ README.txt generated successfully!");
