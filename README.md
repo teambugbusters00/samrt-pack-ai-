@@ -1,74 +1,47 @@
-// generate-readme.js
-const fs = require("fs");
+<h1 align="center">
+  🚀 SmartPack AI – SaaS Packaging Optimization
+</h1>
 
-const readmeContent = `
-# 📦 SmartPack AI – SaaS Packaging Optimization Platform
-
-### 🔗 Live Demo
-[SmartPack AI – Live on Vercel](https://v0-empty-conversation-bice-xi.vercel.app/)
-
----
-
-## 📖 About
-SmartPack AI is a SaaS web application designed to help SMEs optimize packaging decisions using AI-driven insights.
-It reduces material waste, saves costs, and improves sustainability by suggesting the best box sizes, materials, and estimating CO₂ reduction.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=00F700&center=true&vCenter=true&width=600&lines=Optimize+Packaging+with+AI;Reduce+Waste+%7C+Save+Money+%7C+Go+Green;SmartPack+AI+for+SMEs+%F0%9F%9A%80" alt="Typing Animation" />
+</p>
 
 ---
 
-## 🚀 Features
-- 🔐 Authentication (Login/Signup with role-based access)
-- 📊 Dashboard (animated SaaS-style interface)
-- 📂 Upload Data (CSV/Excel import)
-- 🤖 AI Optimization (mock AI engine for box size, material, cost savings, CO₂ reduction)
-- 📈 Results Visualization (tables + charts)
-- 🌍 Sustainability Impact metrics
-- 📑 Reports export (PDF/CSV)
-- ⚙️ Settings (Profile + Subscription plans)
-- 🎨 Dark Futuristic UI (TailwindCSS + Framer Motion)
+## 🔗 Live Demo  
+👉 [Click Here to Try SmartPack AI](https://v0-empty-conversation-bice-xi.vercel.app/)
 
 ---
 
-## 🛠️ Tech Stack
-Frontend: React (Next.js), TailwindCSS, Framer Motion, Recharts
-Backend: Node.js + Express (Supabase/Firebase optional)
-Database: PostgreSQL / Supabase
-Auth: JWT / Supabase Auth
-Reports: jsPDF / PDFKit
+## ✨ Features
+✅ Secure Authentication (JWT/Supabase)  
+✅ Upload CSV/Excel product data  
+✅ AI-powered Packaging Optimization  
+✅ Cost Savings + CO₂ Reduction Insights  
+✅ Interactive Dashboard (Charts + Graphs)  
+✅ Export Reports (PDF/CSV)  
 
 ---
 
-## ⚡ Quick Start
-
-1. Clone the repo
-   \`\`\`bash
-   git clone https://github.com/your-repo/smartpack-ai.git
-   cd smartpack-ai
-   \`\`\`
-
-2. Install dependencies
-   \`\`\`bash
-   npm install
-   \`\`\`
-
-3. Setup environment variables
-   \`\`\`
-   NEXT_PUBLIC_API_URL=http://localhost:5000
-   DATABASE_URL=your_database_url
-   JWT_SECRET=your_secret_key
-   \`\`\`
-
-4. Run development servers
-   - Frontend: \`npm run dev\`
-   - Backend: \`cd server && npm install && npm start\`
+## 🛠 Tech Stack  
+![React](https://img.shields.io/badge/Frontend-React-blue?logo=react&logoColor=white)  
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)  
+![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)  
+![PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-blue?logo=postgresql)  
+![Supabase](https://img.shields.io/badge/Auth-Supabase-3ECF8E?logo=supabase&logoColor=white)  
 
 ---
 
-## 👥 Contributors
-- Raj Kumar Chaudhary
-- Yashoratnam
-- Vijay Ramdev
-- Shreyas Mishra
-`;
+## 📊 Dashboard Preview  
+<p align="center">
+  <img src="https://github.com/raycad-dev/demo-dashboard/blob/main/preview.gif" alt="Dashboard Preview" width="700"/>
+</p>
 
-fs.writeFileSync("README.txt", readmeContent.trim());
-console.log("✅ README.txt generated successfully!");
+---
+
+## 🚀 Quick Start
+```bash
+git clone https://github.com/your-repo/smartpack-ai.git
+cd smartpack-ai
+npm install
+npm run dev
