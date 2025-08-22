@@ -1,30 +1,47 @@
-# Empty conversation
+<h1 align="center">
+  🚀 SmartPack AI – SaaS Packaging Optimization
+</h1>
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=00F700&center=true&vCenter=true&width=600&lines=Optimize+Packaging+with+AI;Reduce+Waste+%7C+Save+Money+%7C+Go+Green;SmartPack+AI+for+SMEs+%F0%9F%9A%80" alt="Typing Animation" />
+</p>
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/vijayjangid0909s-projects/v0-empty-conversation)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/ozzOHNgvbfJ)
+---
 
-## Overview
+## 🔗 Live Demo  
+👉 [Click Here to Try SmartPack AI](https://v0-empty-conversation-bice-xi.vercel.app/)
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+---
 
-## Deployment
+## ✨ Features
+✅ Secure Authentication (JWT/Supabase)  
+✅ Upload CSV/Excel product data  
+✅ AI-powered Packaging Optimization  
+✅ Cost Savings + CO₂ Reduction Insights  
+✅ Interactive Dashboard (Charts + Graphs)  
+✅ Export Reports (PDF/CSV)  
 
-Your project is live at:
+---
 
-**[https://vercel.com/vijayjangid0909s-projects/v0-empty-conversation](https://vercel.com/vijayjangid0909s-projects/v0-empty-conversation)**
+## 🛠 Tech Stack  
+![React](https://img.shields.io/badge/Frontend-React-blue?logo=react&logoColor=white)  
+![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)  
+![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)  
+![PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-blue?logo=postgresql)  
+![Supabase](https://img.shields.io/badge/Auth-Supabase-3ECF8E?logo=supabase&logoColor=white)  
 
-## Build your app
+---
 
-Continue building your app on:
+## 📊 Dashboard Preview  
+<p align="center">
+  <img src="https://github.com/raycad-dev/demo-dashboard/blob/main/preview.gif" alt="Dashboard Preview" width="700"/>
+</p>
 
-**[https://v0.app/chat/projects/ozzOHNgvbfJ](https://v0.app/chat/projects/ozzOHNgvbfJ)**
+---
 
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 🚀 Quick Start
+```bash
+git clone https://github.com/your-repo/smartpack-ai.git
+cd smartpack-ai
+npm install
+npm run dev
