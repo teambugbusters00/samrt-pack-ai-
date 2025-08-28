@@ -1,47 +1,55 @@
 <h1 align="center">
-  🚀 SmartPack AI – SaaS Packaging Optimization
+  ✨ SmartPack AI ✨  
 </h1>
 
+<h3 align="center">🚀 Pack Smarter, Not Harder – with AI 🚀</h3>
+
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=3000&pause=1000&color=00F700&center=true&vCenter=true&width=600&lines=Optimize+Packaging+with+AI;Reduce+Waste+%7C+Save+Money+%7C+Go+Green;SmartPack+AI+for+SMEs+%F0%9F%9A%80" alt="Typing Animation" />
+  <a href="https://smartpack-alpha.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Live Demo-smartpack--alpha.vercel.app-blue?style=for-the-badge&logo=vercel" />
+  </a>
+  <br/>
+  <i>Hover ➡ <b>SmartPack AI</b> ⬆️</i>
 </p>
-
----
-
-## 🔗 Live Demo  
-👉 [Click Here to Try SmartPack AI](https://v0-empty-conversation-bice-xi.vercel.app/)
 
 ---
 
 ## ✨ Features
-✅ Secure Authentication (JWT/Supabase)  
-✅ Upload CSV/Excel product data  
-✅ AI-powered Packaging Optimization  
-✅ Cost Savings + CO₂ Reduction Insights  
-✅ Interactive Dashboard (Charts + Graphs)  
-✅ Export Reports (PDF/CSV)  
+
+- 📦 **AI-Powered Box Optimization** → Suggests best box size from dimensions.  
+- 🌱 **Eco-Friendly** → Calculates packaging material saved & CO₂ reduced.  
+- 🔐 **Secure Authentication** (JWT-based login, signup, profile).  
+- 📊 **Interactive Dashboard** with **animated charts** (Chart.js + Tailwind).  
+- ⚡ **Demo Mode** → Works even without backend APIs for Hackathon judges.  
 
 ---
 
-## 🛠 Tech Stack  
-![React](https://img.shields.io/badge/Frontend-React-blue?logo=react&logoColor=white)  
-![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)  
-![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)  
-![PostgreSQL](https://img.shields.io/badge/DB-PostgreSQL-blue?logo=postgresql)  
-![Supabase](https://img.shields.io/badge/Auth-Supabase-3ECF8E?logo=supabase&logoColor=white)  
+## 🗂 Animated Project Structure  
 
----
-
-## 📊 Dashboard Preview  
-<p align="center">
-  <img src="https://github.com/raycad-dev/demo-dashboard/blob/main/preview.gif" alt="Dashboard Preview" width="700"/>
-</p>
-
----
-
-## 🚀 Quick Start
 ```bash
-git clone https://github.com/your-repo/smartpack-ai.git
-cd smartpack-ai
-npm install
-npm run dev
+📦 smartpack-ai
+ ┣ 📂 backend                # ⚙️ FastAPI + MongoDB
+ ┃ ┣ 📜 main.py              # 🚀 API routes
+ ┃ ┣ 📜 database.py          # 🗄️ MongoDB connection
+ ┃ ┣ 📜 schemas.py           # ✅ Request/Response validation
+ ┃ ┣ 📂 models               # 🤖 Trained ML models
+ ┃ ┃ ┗ 📜 rf_model.pkl       # 🌲 Random Forest model
+ ┃ ┣ 📜 train_model.py       # 📊 Model training script
+ ┃ ┗ 📜 utils.py             # 🔧 Helper functions (CO₂ calc etc.)
+ ┃
+ ┣ 📂 frontend               # 🎨 Next.js + Tailwind + Framer Motion
+ ┃ ┣ 📂 app                  # ⚛️ Pages
+ ┃ ┣ 📂 components           # 🧩 Reusable components
+ ┃ ┣ 📂 styles               # 🎨 Global & Tailwind styles
+ ┃ ┣ 📂 assets               # 🖼️ Logos & icons
+ ┃ ┣ 📂 public               # 🌍 Static files
+ ┃ ┗ 📜 package.json         # 📦 Frontend deps
+ ┃
+ ┣ 📂 dataset                # 📑 Training Data
+ ┃ ┗ 📜 sample_data.csv
+ ┃
+ ┣ 📂 docs                   # 📝 Docs & diagrams
+ ┃ ┗ 📸 architecture.png
+ ┃
+ ┣ 📜 docker-compose.yml     # 🐳 Container setup
+ ┗ 📜 README.md              # 📘 You are here
