@@ -1,4 +1,4 @@
-<!-- Typing Animation Heading -->
+!-- Typing Animation Heading -->
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00F700&center=true&vCenter=true&width=650&lines=🚀+SmartPack+AI;📦+Pack+Smarter,+Not+Harder;🤖+AI+Driven+Sustainability;🌱+Optimize+Space,+Maximize+Impact)](https://git.io/typing-svg)
 
 ---
@@ -50,3 +50,76 @@ _Hover ➡ SmartPack AI_
  ┃
  ┣ 📜 docker-compose.yml     # Container setup
  ┗ 📜 README.md              # You are here
+
+</details>
+---
+
+⚙️ How to Run
+
+<details open>
+<summary>🚀 Backend Setup</summary># Go to backend
+cd backend
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start FastAPI server
+uvicorn main:app --reload
+
+👉 Runs at: http://127.0.0.1:8000
+
+</details><details>
+<summary>🎨 Frontend Setup</summary># Go to frontend
+cd frontend
+
+# Install dependencies
+npm install   # or pnpm install / yarn install
+
+# Start Next.js app
+npm run dev
+
+👉 Runs at: http://localhost:3000
+
+</details><details>
+<summary>🐳 Docker Setup (Optional)</summary># Run everything in containers
+docker-compose up --build
+
+</details>
+---
+
+🛠️ Tech Stack
+
+⚡ Backend: FastAPI + MongoDB + Uvicorn
+
+🎨 Frontend: Next.js + TailwindCSS + Framer Motion
+
+🤖 ML Model: Random Forest (sklearn + joblib)
+
+📊 Charts: Chart.js / Recharts
+
+🐳 Deployment: Vercel (Frontend) + Docker (Optional)
+
+
+
+---
+
+📸 Demo Screenshots
+
+Landing Page	Dashboard	Profile
+
+		
+
+
+
+---
+
+🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
+
+---
+
+📜 License
+
+This project is licensed under the MIT License.
