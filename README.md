@@ -1,55 +1,52 @@
-<h1 align="center">
-  ✨ SmartPack AI ✨  
-</h1>
-
-<h3 align="center">🚀 Pack Smarter, Not Harder – with AI 🚀</h3>
-
-<p align="center">
-  <a href="https://smartpack-alpha.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/Live Demo-smartpack--alpha.vercel.app-blue?style=for-the-badge&logo=vercel" />
-  </a>
-  <br/>
-  <i>Hover ➡ <b>SmartPack AI</b> ⬆️</i>
-</p>
+<!-- Typing Animation Heading -->
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00F700&center=true&vCenter=true&width=650&lines=🚀+SmartPack+AI;📦+Pack+Smarter,+Not+Harder;🤖+AI+Driven+Sustainability;🌱+Optimize+Space,+Maximize+Impact)](https://git.io/typing-svg)
 
 ---
 
-## ✨ Features
+## 🔗 Live Demo  
+[![Live Demo](https://img.shields.io/badge/🔴%20LIVE%20DEMO-smartpack--alpha.vercel.app-blue?style=for-the-badge&logo=vercel)](https://smartpack-alpha.vercel.app)  
+_Hover ➡ SmartPack AI_
 
+---
+
+## ✨ Features  
 - 📦 **AI-Powered Box Optimization** → Suggests best box size from dimensions.  
 - 🌱 **Eco-Friendly** → Calculates packaging material saved & CO₂ reduced.  
-- 🔐 **Secure Authentication** (JWT-based login, signup, profile).  
-- 📊 **Interactive Dashboard** with **animated charts** (Chart.js + Tailwind).  
-- ⚡ **Demo Mode** → Works even without backend APIs for Hackathon judges.  
+- 🔐 **Secure Authentication** → JWT-based login, signup, profile.  
+- 📊 **Interactive Dashboard** → Animated charts (Chart.js + Tailwind).  
+- ⚡ **Demo Mode** → Works even without backend APIs (for Hackathon judges).  
 
 ---
 
-## 🗂 Animated Project Structure  
+## 📂 Animated Project Structure  
+
+<details open>
+<summary>📦 smartpack-ai (click to expand)</summary>
 
 ```bash
 📦 smartpack-ai
- ┣ 📂 backend                # ⚙️ FastAPI + MongoDB
- ┃ ┣ 📜 main.py              # 🚀 API routes
- ┃ ┣ 📜 database.py          # 🗄️ MongoDB connection
- ┃ ┣ 📜 schemas.py           # ✅ Request/Response validation
- ┃ ┣ 📂 models               # 🤖 Trained ML models
- ┃ ┃ ┗ 📜 rf_model.pkl       # 🌲 Random Forest model
- ┃ ┣ 📜 train_model.py       # 📊 Model training script
- ┃ ┗ 📜 utils.py             # 🔧 Helper functions (CO₂ calc etc.)
+ ┣ 📂 backend
+ ┃ ┣ 📜 main.py              # API routes
+ ┃ ┣ 📜 database.py          # MongoDB connection
+ ┃ ┣ 📜 schemas.py           # Request/Response validation
+ ┃ ┣ 📂 models
+ ┃ ┃ ┗ 📜 rf_model.pkl       # Random Forest trained model
+ ┃ ┣ 📜 train_model.py       # Model training script
+ ┃ ┗ 📜 utils.py             # Helper functions (CO₂ calc, etc.)
  ┃
- ┣ 📂 frontend               # 🎨 Next.js + Tailwind + Framer Motion
- ┃ ┣ 📂 app                  # ⚛️ Pages
- ┃ ┣ 📂 components           # 🧩 Reusable components
- ┃ ┣ 📂 styles               # 🎨 Global & Tailwind styles
- ┃ ┣ 📂 assets               # 🖼️ Logos & icons
- ┃ ┣ 📂 public               # 🌍 Static files
- ┃ ┗ 📜 package.json         # 📦 Frontend deps
+ ┣ 📂 frontend
+ ┃ ┣ 📂 app                  # Next.js pages
+ ┃ ┣ 📂 components           # Reusable components
+ ┃ ┣ 📂 styles               # Tailwind + global styles
+ ┃ ┣ 📂 assets               # Logos, icons
+ ┃ ┣ 📂 public               # Static files
+ ┃ ┗ 📜 package.json         # Frontend dependencies
  ┃
- ┣ 📂 dataset                # 📑 Training Data
- ┃ ┗ 📜 sample_data.csv
+ ┣ 📂 dataset
+ ┃ ┗ 📜 sample_data.csv      # Training data
  ┃
- ┣ 📂 docs                   # 📝 Docs & diagrams
- ┃ ┗ 📸 architecture.png
+ ┣ 📂 docs
+ ┃ ┗ 📸 architecture.png     # Architecture diagram
  ┃
- ┣ 📜 docker-compose.yml     # 🐳 Container setup
- ┗ 📜 README.md              # 📘 You are here
+ ┣ 📜 docker-compose.yml     # Container setup
+ ┗ 📜 README.md              # You are here
